@@ -2,6 +2,7 @@
 <html lang="vi">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,68 +11,158 @@
 
 <style>
 
+
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f5;
-    margin:0;
+
+font-family:Arial,sans-serif;
+
+background:#f5f5f5;
+
+margin:0;
+
 }
+
 
 
 header{
-    background:#2e8b57;
-    color:white;
-    text-align:center;
-    padding:30px;
+
+background:#2e8b57;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
 }
+
 
 
 .container{
-    width:90%;
-    margin:auto;
+
+width:90%;
+
+margin:auto;
+
 }
 
-
-.section{
-    margin:30px 0;
-}
 
 
 h2{
-    color:#2e8b57;
+
+color:#2e8b57;
+
 }
 
 
-/* khung món ăn */
+
+/* 4 CARD LỌC */
+
+
+.choose{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+margin:30px 0;
+
+}
+
+
+
+.choose-card{
+
+background:white;
+
+padding:12px;
+
+border-radius:12px;
+
+text-align:center;
+
+cursor:pointer;
+
+box-shadow:0 2px 8px #ccc;
+
+transition:0.3s;
+
+}
+
+
+
+.choose-card:hover{
+
+background:#d8f3dc;
+
+transform:scale(1.05);
+
+}
+
+
+
+.choose-card h2{
+
+font-size:25px;
+
+margin:5px;
+
+}
+
+
+
+.choose-card h3{
+
+font-size:15px;
+
+}
+
+
+
+/* KHU VỰC MÓN */
+
 
 .menu{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
 }
+
 
 
 .card{
 
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 3px 10px #ccc;
-    transition:0.3s;
+background:white;
 
-}
+border-radius:15px;
 
+overflow:hidden;
 
-.card:hover{
-    transform:scale(1.05);
+box-shadow:0 3px 10px #ccc;
+
 }
 
 
 
 .card img{
 
-    width:100%;
-    height:160px;
-    object-fit:cover;
+
+/* CHỈNH KÍCH THƯỚC ẢNH Ở ĐÂY */
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
 
 }
 
@@ -79,8 +170,7 @@ h2{
 
 .card h3{
 
-    text-align:center;
-    padding:10px;
+text-align:center;
 
 }
 
@@ -88,9 +178,19 @@ h2{
 
 .info{
 
-    text-align:center;
-    color:#666;
-    padding-bottom:15px;
+text-align:center;
+
+color:#666;
+
+padding-bottom:15px;
+
+}
+
+
+
+.hidden{
+
+display:none;
 
 }
 
@@ -98,20 +198,30 @@ h2{
 
 footer{
 
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:15px;
+background:#333;
+
+color:white;
+
+text-align:center;
+
+padding:15px;
+
+margin-top:30px;
 
 }
 
 
+
 </style>
+
 
 </head>
 
 
+
+
 <body>
+
 
 
 <header>
@@ -124,73 +234,210 @@ footer{
 
 
 
+
 <div class="container">
 
 
 
-<div class="section">
+<h2>🎯 Chọn thực đơn theo nhu cầu</h2>
 
-<h2>🍳 Bữa sáng</h2>
+
+
+<div class="choose">
+
+
+
+<div class="choose-card" onclick="showMenu('nhanh')">
+
+<h2>⚡</h2>
+
+<h3>Món nhanh</h3>
+
+</div>
+
+
+
+
+<div class="choose-card" onclick="showMenu('re')">
+
+<h2>💰</h2>
+
+<h3>Món tiết kiệm</h3>
+
+</div>
+
+
+
+
+<div class="choose-card" onclick="showMenu('du')">
+
+<h2>💪</h2>
+
+<h3>Đủ dinh dưỡng</h3>
+
+</div>
+
+
+
+
+<div class="choose-card" onclick="showMenu('lanh')">
+
+<h2>🥗</h2>
+
+<h3>Lành mạnh</h3>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<h2>🍽️ Danh sách món ăn</h2>
+
 
 
 <div class="menu">
 
 
 
-<div class="card">
+<div class="card nhanh re du lanh">
 
-<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a">
+<img src="images/banhmitrung.jpg">
 
 <h3>Bánh mì kẹp trứng</h3>
 
-<p class="info">Nhanh - tiện - đủ năng lượng</p>
+<p class="info">Đồ ăn chính</p>
 
 </div>
 
 
 
-<div class="card">
+<div class="card food re du">
 
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+<img src="images/xoi.jpg">
 
 <h3>Xôi mặn</h3>
 
-<p class="info">No lâu, phù hợp sinh viên</p>
+<p class="info">Đồ ăn chính</p>
 
 </div>
 
 
 
-<div class="card">
+<div class="card food nhanh du">
 
-<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+<img src="images/banhmithit.jpg">
 
 <h3>Bánh mì thịt</h3>
 
-<p class="info">Chi phí hợp lý</p>
+<p class="info">Đồ ăn chính</p>
 
 </div>
 
 
 
-<div class="card">
+<div class="card food nhanh lanh">
 
-<img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8">
+<img src="images/banhcuon.jpg">
+
+<h3>Bánh cuốn</h3>
+
+<p class="info">Đồ ăn chính</p>
+
+</div>
+
+
+
+<div class="card food du lanh">
+
+<img src="images/bunbo.jpg">
 
 <h3>Bún bò</h3>
 
-<p class="info">Bữa sáng nhiều năng lượng</p>
-
-</div>
-
-
-</div>
+<p class="info">Đồ ăn chính</p>
 
 </div>
 
 
 
+<div class="card food nhanh re">
 
+<img src="images/banhgio.jpg">
+
+<h3>Bánh giò</h3>
+
+<p class="info">Đồ ăn chính</p>
+
+</div>
+
+
+
+
+<div class="card food nhanh du">
+
+<img src="images/th.jpg">
+
+<h3>Sữa TH true milk</h3>
+
+<p class="info">Đồ ăn phụ</p>
+
+</div>
+
+
+
+
+<div class="card food nhanh re du lanh">
+
+<img src="images/chuoi.jpg">
+
+<h3>Chuối</h3>
+
+<p class="info">Đồ ăn phụ</p>
+
+</div>
+
+
+
+
+<div class="card food re du lanh">
+
+<img src="images/bap.jpg">
+
+<h3>Bắp luộc</h3>
+
+<p class="info">Đồ ăn phụ</p>
+
+</div>
+
+
+
+<div class="card food nhanh re du lanh">
+
+<img src="images/suachua.jpg">
+
+<h3>Sữa chua</h3>
+
+<p class="info">Đồ ăn phụ</p>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- TRƯA TỐI -->
 
 <div class="section">
 
@@ -200,11 +447,20 @@ footer{
 
 <div class="menu">
 
+<div class="card food nhanh re du lanh">
+
+<img src="images/com.jpg">
+
+<h3>Cơm</h3>
+
+</div>
+
+<!-- ĐẠM -->
 
 
-<div class="card">
+<div class="card food du">
 
-<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+<img src="images/thitkhotrung.jpg">
 
 <h3>Thịt kho trứng cút</h3>
 
@@ -213,15 +469,79 @@ footer{
 </div>
 
 
+<div class="card food nhanh du">
+
+<img src="images/thitchaycanh.jpg">
+
+<h3>Thịt rang cháy cạnh</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
 
 
-<div class="card">
+<div class="card food du">
 
-<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+<img src="images/gachienmam.jpg">
 
 <h3>Gà chiên mắm</h3>
 
-<p class="info">Giàu protein</p>
+<p class="info">Món đạm</p>
+
+</div>
+
+
+<div class="card food nhanh du lanh">
+
+<img src="images/gasaot.jpg">
+
+<h3>Gà xào sả ớt</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
+
+
+<div class="card food re du lanh">
+
+<img src="images/chatrung.jpg">
+
+<h3>Chả trứng</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
+
+
+<div class="card nhanh re du lanh">
+
+<img src="images/dauphu.jpg">
+
+<h3>Đậu phụ sốt cà chua</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
+
+
+<div class="card food re du">
+
+<img src="images/cakhotieu.jpg">
+
+<h3>Cá basa kho tiêu</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
+
+
+<div class="card food nhanh du lanh">
+
+<img src="images/thitluoc.jpg">
+
+<h3>Thịt luộc</h3>
+
+<p class="info">Món đạm</p>
 
 </div>
 
@@ -229,13 +549,84 @@ footer{
 
 
 
-<div class="card">
 
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+
+<!-- RAU -->
+
+
+<div class="card food nhanh re">
+
+<img src="images/raumuong.jpg">
 
 <h3>Rau muống xào tỏi</h3>
 
-<p class="info">Bổ sung chất xơ</p>
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh re lanh">
+
+<img src="images/rauden.jpg">
+
+<h3>Rau dền luộc</h3>
+
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh re">
+
+<img src="images/bapcaixao.jpg">
+
+<h3>Bắp cải xào cà rốt</h3>
+
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh re lanh">
+
+<img src="images/muopxaogia.jpg">
+
+<h3>Mướp xào giá</h3>
+
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh re">
+
+<img src="images/susu.jpg">
+
+<h3>Su su xào</h3>
+
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh du">
+
+<img src="images/daudua.jpg">
+
+<h3>Đậu đũa xào thịt bằm</h3>
+
+<p class="info">Món rau</p>
+
+</div>
+
+
+<div class="card food nhanh lanh">
+
+<img src="images/salad.jpg">
+
+<h3>Salad xà lách dưa leo cà chua</h3>
+
+<p class="info">Món rau</p>
 
 </div>
 
@@ -243,13 +634,83 @@ footer{
 
 
 
-<div class="card">
 
-<img src="https://images.unsplash.com/photo-1604152135912-04a022e23696">
+<!-- CANH -->
+
+
+<div class="card food nhanh re du">
+
+<img src="images/canhtrung.jpg">
 
 <h3>Canh trứng cà chua</h3>
 
-<p class="info">Món canh dễ nấu</p>
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food nhanh du">
+
+<img src="images/canhcai.jpg">
+
+<h3>Canh rau cải thịt bằm</h3>
+
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food nhanh re">
+
+<img src="images/canhmongtoi.jpg">
+
+<h3>Canh rau mồng tơi</h3>
+
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food du lanh">
+
+<img src="images/canhbido.jpg">
+
+<h3>Canh bí đỏ</h3>
+
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food du lanh">
+
+<img src="images/canhbidao.jpg">
+
+<h3>Canh bí đao</h3>
+
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food du lanh">
+
+<img src="images/canhkhoqua.jpg">
+
+<h3>Canh khổ qua nhồi thịt</h3>
+
+<p class="info">Canh</p>
+
+</div>
+
+
+<div class="card food du lanh">
+
+<img src="images/canhchua.png">
+
+<h3>Canh chua</h3>
+
+<p class="info">Canh</p>
 
 </div>
 
@@ -257,11 +718,9 @@ footer{
 
 </div>
 
-
 </div>
 
-
-
+<!-- ĂN NGOÀI -->
 
 
 <div class="section">
@@ -274,45 +733,127 @@ footer{
 
 
 
-<div class="card">
+<div class="card food nhanh re du">
 
-<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624">
+<img src="images/hutieu.jpg">
+
+<h3>Hủ tiếu</h3>
+
+</div>
+
+
+<div class="card food nhanh du lanh">
+
+<img src="images/phobo.jpg">
 
 <h3>Phở bò</h3>
 
-<p class="info">Lựa chọn khi bận rộn</p>
+</div>
+
+
+<div class="card food nhanh du lanh">
+
+<img src="images/mienga.jpg">
+
+<h3>Miến gà</h3>
 
 </div>
 
 
+<div class="card food nhanh re du">
 
-<div class="card">
+<img src="images/bunthitnuong.jpg">
 
-<img src="https://images.unsplash.com/photo-1555126634-323283e090fa">
+<h3>Bún thịt nướng</h3>
+
+</div>
+
+
+<div class="card food nhanh du">
+
+<img src="images/comtam.jpg">
 
 <h3>Cơm tấm</h3>
 
-<p class="info">Bữa ăn phổ biến</p>
+</div>
+
+
+<div class="card food nhanh re">
+
+<img src="images/comchien.jpg">
+
+<h3>Cơm chiên Dương Châu</h3>
 
 </div>
 
 
+<div class="card food nhanh">
+
+<img src="images/hamburger.jpg">
+
+<h3>Hamburger</h3>
+
 </div>
 
 
-</div>
-
-
 
 </div>
+
+
+
+</div>
+
 
 
 
 <footer>
 
-UTH NutriMenu - Dinh dưỡng thông minh cho sinh viên
+UTH NutriMenu
 
 </footer>
+
+
+
+
+
+
+<script>
+
+
+function showMenu(type){
+
+
+let foods = document.querySelectorAll(".food");
+
+
+// ẩn tất cả món
+
+foods.forEach(food=>{
+
+food.classList.add("hidden");
+
+});
+
+
+// hiện nhóm được chọn
+
+let result = document.querySelectorAll("." + type);
+
+
+result.forEach(item=>{
+
+item.classList.remove("hidden");
+
+});
+
+
+}
+
+
+
+</script>
+
+
 
 
 
