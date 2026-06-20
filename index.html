@@ -1,74 +1,112 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTH NutriMenu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
+<title>UTH NutriMenu</title>
 
-        header {
-            background-color: #2e8b57;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
 
-        h1 {
-            margin: 0;
-        }
+<style>
 
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f5;
+    margin:0;
+}
 
-        .section {
-            background: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 15px;
-        }
 
-        h2 {
-            color: #2e8b57;
-        }
+header{
+    background:#2e8b57;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
 
-        h3 {
-            color: #444;
-        }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+.container{
+    width:90%;
+    margin:auto;
+}
 
-        li {
-            background: #eeeeee;
-            margin: 8px 0;
-            padding: 12px;
-            border-radius: 8px;
-        }
 
-        li:hover {
-            background: #d8f3dc;
-        }
+.section{
+    margin:30px 0;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: white;
-        }
 
-    </style>
+h2{
+    color:#2e8b57;
+}
+
+
+/* khung món ăn */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+
+.card{
+
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 10px #ccc;
+    transition:0.3s;
+
+}
+
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+
+
+.card img{
+
+    width:100%;
+    height:160px;
+    object-fit:cover;
+
+}
+
+
+
+.card h3{
+
+    text-align:center;
+    padding:10px;
+
+}
+
+
+
+.info{
+
+    text-align:center;
+    color:#666;
+    padding-bottom:15px;
+
+}
+
+
+
+footer{
+
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+
+}
+
+
+</style>
 
 </head>
 
@@ -77,128 +115,207 @@
 
 
 <header>
-    <h1>UTH NutriMenu</h1>
-    <p>Thực đơn dinh dưỡng linh hoạt cho sinh viên</p>
+
+<h1>🍱 UTH NutriMenu</h1>
+
+<p>Thực đơn dinh dưỡng linh hoạt cho sinh viên</p>
+
 </header>
+
 
 
 <div class="container">
 
 
-    <div class="section">
 
-        <h2>🍳 Bữa sáng</h2>
+<div class="section">
 
-
-        <h3>Đồ ăn chính</h3>
-
-        <ul>
-            <li>Bánh mì kẹp trứng</li>
-            <li>Xôi mặn</li>
-            <li>Bánh mì thịt</li>
-            <li>Bánh cuốn</li>
-            <li>Bún bò</li>
-            <li>Bánh giò</li>
-        </ul>
+<h2>🍳 Bữa sáng</h2>
 
 
-        <h3>Đồ ăn phụ</h3>
-
-        <ul>
-            <li>Sữa TH true milk</li>
-            <li>Chuối</li>
-            <li>Bắp luộc</li>
-            <li>Sữa chua</li>
-        </ul>
-
-    </div>
+<div class="menu">
 
 
 
+<div class="card">
 
-    <div class="section">
+<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a">
 
-        <h2>🍚 Bữa trưa + tối</h2>
+<h3>Bánh mì kẹp trứng</h3>
 
-        <h3>Cơm</h3>
+<p class="info">Nhanh - tiện - đủ năng lượng</p>
 
-        <ul>
-            <li>Cơm trắng</li>
-        </ul>
-
-
-        <h3>Món đạm</h3>
-
-        <ul>
-            <li>Thịt kho trứng cút</li>
-            <li>Thịt rang cháy cạnh</li>
-            <li>Gà chiên mắm</li>
-            <li>Gà xào sả ớt</li>
-            <li>Chả trứng</li>
-            <li>Đậu phụ sốt cà chua</li>
-            <li>Cá basa kho tiêu</li>
-            <li>Thịt luộc</li>
-        </ul>
+</div>
 
 
 
-        <h3>Món rau</h3>
+<div class="card">
 
-        <ul>
-            <li>Rau muống xào tỏi</li>
-            <li>Rau dền luộc</li>
-            <li>Bắp cải xào cà rốt</li>
-            <li>Mướp xào giá</li>
-            <li>Su su xào</li>
-            <li>Đậu đũa xào thịt bằm</li>
-            <li>Salad xà lách dưa leo cà chua</li>
-        </ul>
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+<h3>Xôi mặn</h3>
+
+<p class="info">No lâu, phù hợp sinh viên</p>
+
+</div>
 
 
 
+<div class="card">
 
-        <h3>Canh</h3>
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
 
-        <ul>
-            <li>Canh trứng cà chua</li>
-            <li>Canh rau cải thịt bằm</li>
-            <li>Canh rau mồng tơi</li>
-            <li>Canh bí đỏ</li>
-            <li>Canh bí đao</li>
-            <li>Canh khổ qua nhồi thịt</li>
-            <li>Canh chua</li>
-        </ul>
+<h3>Bánh mì thịt</h3>
 
-    </div>
+<p class="info">Chi phí hợp lý</p>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8">
+
+<h3>Bún bò</h3>
+
+<p class="info">Bữa sáng nhiều năng lượng</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 
 
 
 
-    <div class="section">
+<div class="section">
 
-        <h2>🍜 Ăn ngoài</h2>
 
-        <ul>
-            <li>Hủ tiếu</li>
-            <li>Phở bò</li>
-            <li>Miến gà</li>
-            <li>Bún thịt nướng</li>
-            <li>Cơm tấm</li>
-            <li>Cơm chiên Dương Châu</li>
-            <li>Hamburger</li>
-        </ul>
+<h2>🍚 Bữa trưa + tối</h2>
 
-    </div>
+
+<div class="menu">
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+
+<h3>Thịt kho trứng cút</h3>
+
+<p class="info">Món đạm</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+
+<h3>Gà chiên mắm</h3>
+
+<p class="info">Giàu protein</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+
+<h3>Rau muống xào tỏi</h3>
+
+<p class="info">Bổ sung chất xơ</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1604152135912-04a022e23696">
+
+<h3>Canh trứng cà chua</h3>
+
+<p class="info">Món canh dễ nấu</p>
+
+</div>
+
 
 
 </div>
 
 
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>🍜 Ăn ngoài</h2>
+
+
+<div class="menu">
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624">
+
+<h3>Phở bò</h3>
+
+<p class="info">Lựa chọn khi bận rộn</p>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1555126634-323283e090fa">
+
+<h3>Cơm tấm</h3>
+
+<p class="info">Bữa ăn phổ biến</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
 <footer>
-    UTH NutriMenu - Dinh dưỡng thông minh cho sinh viên
+
+UTH NutriMenu - Dinh dưỡng thông minh cho sinh viên
+
 </footer>
 
 
+
 </body>
+
 </html>
